@@ -15,12 +15,12 @@ describe('Index Component', () => {
     });
 
     it('Should render without error', () => {
-        const wrapper = component.find('.headerComponent');
+        const wrapper = component.find(`[data-test='headerComponent']`);
         expect(wrapper.length).toBe(1)
     })
 
     it('Should render Image Logo', ()=> {
-        const logoImage = component.find('.logoImage');
+        const logoImage = component.find(`[data-test='logoImage']`);
         expect(logoImage.length).toBe(1);
     });
 });
