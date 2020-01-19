@@ -17,7 +17,7 @@ describe('Headline Component', () => {
         it('Should not throw a warning', () => {
             const expectedProps = {
                 header: "Post 1",
-                description: "Sample Discription About that post, I think you are enjoy that",
+                description: "Description 1",
                 persons: [{
                         firstName: 'abc',
                         lastName: 'Sarker',
