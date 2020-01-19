@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-
+import './style.scss'
+import PropTypes from 'prop-types';
 
 class Headline extends Component {
 
@@ -21,6 +22,19 @@ class Headline extends Component {
             </div>
         )
     }
+}
+
+Headline.propTypes = {
+    headline: PropTypes.string,
+    description: PropTypes.string,
+    // Complex example for working with PropTypes (not used in component)
+    persons: PropTypes.arrayOf(PropTypes.shape({
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        email: PropTypes.string,
+        age: PropTypes.number,
+        onlineStatus: PropTypes.bool
+    }))
 }
 
 export default Headline;
