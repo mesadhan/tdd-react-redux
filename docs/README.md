@@ -1,10 +1,24 @@
-brew install yarn
-yarn add  node-sass
 
-yarn add -D enzyme enzyme-adapter-react-16 jest jest-enzyme
+# Install yarn in macOS
 
+    brew install yarn
 
-npm install --save prop-types
+# Install SASS
+
+    yarn add node-sass
+
+# install test libs 
+
+    yarn add -D enzyme enzyme-adapter-react-16 jest jest-enzyme
+
+# install redux libs
+
+    yarn add redux react-redux redux-thunk
+
+# install prop type checker libs
+    
+    yarn add prop-types
+    npm install --save prop-types
 
 # References:
 
