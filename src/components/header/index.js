@@ -10,7 +10,7 @@ const Header = (props) => {
                     <img data-test="logoImage" src={Logo} alt="logo"/>
                 </div>
             </div>
-           Hello from React Component
+           {/* Hello from React Component */}
         </header>
     )
 };
