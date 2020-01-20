@@ -1,3 +1,24 @@
+# TDD Template For React & Redux using Jest and Enzyme
+
+The purpose of this project is to demonstrate how to properly implement a test first approch (TDD) to coding with react and redux.
+
+This project contains:
+
+* Production Project Layout.
+* How component are communate.
+* TDD driven developement.
+* How to use Jest & Enzyme.
+* How component state & redux state work together.
+* Using of actions and reducers.
+* How to fetch data from api.
+* Render Components, Unit & Intregration test.
+* And, Finally git pre-hook intregration.
+
+
+
+___
+# ReactJS Guides
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +87,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+[References](https://github.com/simpletut/Testing-React-Redux-with-Jest-and-Enzyme)
