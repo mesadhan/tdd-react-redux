@@ -31,6 +31,8 @@ class App extends Component {
 
   render() {
 
+    const { posts } = this.props;
+
     const configButton = {
       buttonText: 'Get posts',
       emitEvent: this.loadData
@@ -49,6 +51,23 @@ class App extends Component {
             persons={persons} />
 
           <SharedButton {...configButton} />
+
+          {posts.length > 0 && 
+            <div>
+              {posts.map((post, index) => {
+
+                const {title, body} = post;
+                const configurationListItem = {
+                  title,
+                  description: body
+                }
+
+                return (
+                  <ListItem key={index} {...configurationListItem}/>
+                )
+              })}
+            </div>
+          }
 
         </section>
       </div>
