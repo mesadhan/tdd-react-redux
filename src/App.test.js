@@ -29,4 +29,21 @@ describe('App Component', () => {
         let c = findByTestAttr(component, 'appComponent');
         expect(c.length).toBe(1);
     });
+
+
+    it('Should updateState method update state as expected', () => {
+        const classInstance = component.instance();
+        classInstance.updateStateHideBtn();
+        
+        const newState = classInstance.state.hideBtn;
+        expect(newState).toBe(true);
+    });
+
+    it('Should method return value as expected', ()=> {
+        const classInstance = component.instance();
+        let value = classInstance.updateGivenNumber(34);
+        //console.log('messae', value);
+        expect(value).toBe(35)
+    });
+
 });

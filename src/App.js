@@ -17,21 +17,41 @@ const persons = [{
   onlineStatus: true
 }];
 
+const initialState = {
+  hideBtn: false
+}
+
 
 class App extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      ...initialState
+    }
     this.loadData = this.loadData.bind(this)
   }
 
   loadData() {
     this.props.fetchPosts();
+    this.updateStateHideBtn();
+  }
+
+  updateStateHideBtn() {
+    const { hideBtn } = this.state;
+    this.setState({
+      hideBtn: !hideBtn
+    })
+  }
+
+  updateGivenNumber(number) {
+    return number + 1;
   }
 
   render() {
 
     const { posts } = this.props;
+    const { hideBtn } = this.state;
 
     const configButton = {
       buttonText: 'Get posts',
@@ -50,7 +70,9 @@ class App extends Component {
             description="Sample Discription About that post, I think you are enjoy that"
             persons={persons} />
 
-          <SharedButton {...configButton} />
+          {!hideBtn &&
+            <SharedButton {...configButton} />
+          }
 
           {posts.length > 0 && 
             <div>
