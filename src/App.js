@@ -50,7 +50,9 @@ class App extends Component {
             description="Sample Discription About that post, I think you are enjoy that"
             persons={persons} />
 
-          <SharedButton {...configButton} />
+          {!posts.length > 0 &&
+            <SharedButton {...configButton} />
+          }
 
           {posts.length > 0 && 
             <div>
