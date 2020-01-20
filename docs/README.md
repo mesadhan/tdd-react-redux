@@ -23,3 +23,4 @@
 # References:
 
 - https://github.com/facebook/prop-types
+- https://jestjs.io/docs/en/expect
