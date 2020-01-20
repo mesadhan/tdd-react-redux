@@ -1,18 +1,18 @@
 # TDD Template For React & Redux using Jest and Enzyme
 
-The purpose of this project is to demonstrate how to properly implement a test first approch (TDD) to coding with react and redux.
+The purpose of this project is to demonstrate how to properly implement a test first approach (TDD) to coding with react and redux.
 
 This project contains:
 
-* Production Project Layout.
-* How component are communate.
-* TDD driven developement.
+* Production Structure.
+* How components communicate.
+* TDD driven development.
 * How to use Jest & Enzyme.
 * How component state & redux state work together.
 * Using of actions and reducers.
-* How to fetch data from api.
-* Render Components, Unit & Intregration test.
-* And, Finally git pre-hook intregration.
+* How to fetch data from API.
+* Render Components, Unit & Integration test.
+* And, Finally git pre-hook integration.
 
 
 
