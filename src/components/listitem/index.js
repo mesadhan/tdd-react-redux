@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
+import './style.scss'
 
 class ListItem extends Component {
 
@@ -10,7 +11,7 @@ class ListItem extends Component {
 
         return (
            <div data-test="listItemComponent">
-             <h3 data-test="componentTitle">{title}</h3>
+             <h3 className="title" data-test="componentTitle">{title}</h3>
              <p data-test="componentDescription">{description}</p>
            </div>
         )
