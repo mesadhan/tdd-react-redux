@@ -20,6 +20,12 @@
     yarn add prop-types
     npm install --save prop-types
 
+# intall husky for git hook before push or commit
+
+    npm install husky --save-dev
+
+
+
 # References:
 
 - https://github.com/facebook/prop-types
