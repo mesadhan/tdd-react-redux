@@ -7,7 +7,7 @@ import { findByTestAttr, testStore } from './../utils';
 const setUp = (initialState={}) => {
     const store = testStore(initialState);
     const component = shallow(<App store={store} />).childAt(0).dive();
-    console.log( component.debug() );
+    //console.log( component.debug() );
     return component;
 }
 
