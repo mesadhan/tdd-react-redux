@@ -17,7 +17,7 @@ describe('Posts Reducer', () => {
             type: types.GET_POSTS,
             payload: posts
         });
-        expect(posts).toEqual(posts);
+        expect(newState).toEqual(posts);
     });
     
 });
