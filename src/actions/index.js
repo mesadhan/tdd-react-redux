@@ -6,7 +6,7 @@ export const fetchPosts = () => async (dispatch) => {
         const posts = await fetch(`${url}/posts?_limit=10`);
         const res = await posts.json();
 
-        console.log(res);
+        //console.log(res);
 
         dispatch({
             type: types.GET_POSTS,

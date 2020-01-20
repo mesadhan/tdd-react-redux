@@ -75,10 +75,17 @@ class App extends Component {
   }
 }
 
+
 const mapStateToProps = (state) => {
   return {
     posts: state.posts
   }
 }
 
+// if we and to override dispatcher method
+const mapDispatchToProps = dispatch => ({
+  fetchPosts: () => dispatch(fetchPosts())
+})
+
 export default connect(mapStateToProps, { fetchPosts })(App);
+//export default connect(mapStateToProps, mapDispatchToProps)(App);
