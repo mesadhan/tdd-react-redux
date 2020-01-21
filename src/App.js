@@ -1,113 +1,36 @@
 import React, { Component } from 'react';
 import Header from './components/header';
-import Headline from './components/headline';
-import SharedButton from './components/button';
-import ListItem from './components/listitem'
-import { connect } from 'react-redux';
-import { fetchPosts } from './actions';
-
+import Nav from './components/nav';
+import Home from './Home';
+import About from './About';
 import './app.scss'
 
 
-const persons = [{
-  firstName: 'Md. Sadhan',
-  lastName: 'Sarker',
-  email: 'cse.sadhan@gmail.com',
-  age: 25,
-  onlineStatus: true
-}];
-
-const initialState = {
-  hideBtn: false
-}
+import {
+  BrowserRouter as Router, Switch, Route,
+} from "react-router-dom";
 
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      ...initialState
-    }
-    this.loadData = this.loadData.bind(this)
-  }
-
-  loadData() {
-    this.props.fetchPosts();
-    this.updateStateHideBtn();
-  }
-
-  updateStateHideBtn() {
-    const { hideBtn } = this.state;
-    this.setState({
-      hideBtn: !hideBtn
-    })
-  }
-
-  updateGivenNumber(number) {
-    return number + 1;
-  }
-
   render() {
-
-    const { posts } = this.props;
-    const { hideBtn } = this.state;
-
-    const configButton = {
-      buttonText: 'Get posts',
-      emitEvent: this.loadData
-    }
-
     return (
-      <div data-test="appComponent" className="App">
 
-        <Header />
+      <Router>
+        <div data-test="appComponent" className="App">
 
-        <section className="main">
+          <Header />
+          <Nav />
+ 
+          {/* define all the route */}
+          <Switch>
+            <Route path="/" exact component={Home}/>
+            <Route path="/about" exact component={About}/>
+          </Switch>
 
-          <Headline
-            header="Post 1"
-            description="Sample Discription About that post, I think you are enjoy that"
-            persons={persons} />
-
-          {!hideBtn &&
-            <SharedButton {...configButton} />
-          }
-
-          {posts.length > 0 && 
-            <div>
-              {posts.map((post, index) => {
-
-                const {title, body} = post;
-                const configurationListItem = {
-                  title,
-                  description: body
-                }
-
-                return (
-                  <ListItem key={index} {...configurationListItem}/>
-                )
-              })}
-            </div>
-          }
-
-        </section>
-      </div>
+        </div>
+      </Router>
     );
   }
 }
 
-
-const mapStateToProps = (state) => {
-  return {
-    posts: state.posts
-  }
-}
-
-// if we and to override dispatcher method
-const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts())
-})
-
-export default connect(mapStateToProps, { fetchPosts })(App);
-//export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

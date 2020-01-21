@@ -24,7 +24,9 @@
 
     npm install husky --save-dev
 
+# install react router
 
+    yarn add react-router-dom
 
 # References:
 

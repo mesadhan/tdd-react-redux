@@ -1,0 +1,33 @@
+.navComponent {
+    max-height: 50px;
+    background: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .leftMenus{
+        flex-grow: 5;
+        display: flex;
+        a {
+            padding: 0px 5px 0px 10px;
+            color: #ffffff;
+            text-decoration: none;
+            &:hover {
+                color: #61DAFB;
+            }
+        }
+    }
+    .rightMenus{
+        flex-grow: 5;
+        text-align: right;
+        color: white;
+        padding: 5px 5px 5px 5px;
+        
+        img{
+            max-height: 40px;
+        }
+    }
+    
+}
+
+

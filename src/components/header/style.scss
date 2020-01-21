@@ -1,10 +1,24 @@
-header{
-    display:block;
-    width:100%;
-    margin: 0 auto;
-    padding: 0 10px;
-}
+header {
+  background-color: indigo;
 
-.wrap{
-  
+  .wrap{
+    display: flex;
+    flex-direction: row;
+
+    .logo {
+      flex: 1;
+
+      img {
+        height: 150px;
+        margin: 0;
+        padding: 0 10px;
+      }
+    }
+
+    .welcome {
+      flex: 1;
+      color: white;
+    }
+
+  }
 }
