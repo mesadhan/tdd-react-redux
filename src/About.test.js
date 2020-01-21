@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { findByTestAttr, checkProps } from './../utils'
-import App from './App';
+import About from './About';
 
 const setUp =(props = {}) => {
-    return shallow(<App/>);
+    return shallow(<About/>);
 }
 
 
-describe('App Component', () => {
+describe('About Component', () => {
 
     let component;
     beforeEach(()=> {
@@ -16,7 +16,7 @@ describe('App Component', () => {
     });
 
     it('Should render without error', () => {
-        const wrapper = findByTestAttr(component, 'appComponent');
+        const wrapper = findByTestAttr(component, 'aboutComponent');
         expect(wrapper.length).toBe(1)
     });
 

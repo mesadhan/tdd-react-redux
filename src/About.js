@@ -4,7 +4,7 @@ class About extends Component {
     
     render() {
         return (
-            <div>
+            <div data-test="aboutComponent">
                 <h1>Hello From About Page</h1>
             </div>
 
