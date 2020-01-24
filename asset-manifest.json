@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tdd-react-redux/static/css/main.a2104af1.chunk.css",
-    "main.js": "/tdd-react-redux/static/js/main.94eb404e.chunk.js",
-    "main.js.map": "/tdd-react-redux/static/js/main.94eb404e.chunk.js.map",
-    "runtime-main.js": "/tdd-react-redux/static/js/runtime-main.ee975718.js",
-    "runtime-main.js.map": "/tdd-react-redux/static/js/runtime-main.ee975718.js.map",
-    "static/js/2.1e19b0de.chunk.js": "/tdd-react-redux/static/js/2.1e19b0de.chunk.js",
-    "static/js/2.1e19b0de.chunk.js.map": "/tdd-react-redux/static/js/2.1e19b0de.chunk.js.map",
-    "index.html": "/tdd-react-redux/index.html",
-    "precache-manifest.dc9bbee203a5dc7ec8e7a1ff2300bf37.js": "/tdd-react-redux/precache-manifest.dc9bbee203a5dc7ec8e7a1ff2300bf37.js",
-    "service-worker.js": "/tdd-react-redux/service-worker.js",
-    "static/css/main.a2104af1.chunk.css.map": "/tdd-react-redux/static/css/main.a2104af1.chunk.css.map",
-    "static/js/2.1e19b0de.chunk.js.LICENSE": "/tdd-react-redux/static/js/2.1e19b0de.chunk.js.LICENSE"
+    "main.css": "https://mesadhan.github.io/tdd-react-redux/static/css/main.f5089a4c.chunk.css",
+    "main.js": "https://mesadhan.github.io/tdd-react-redux/static/js/main.1485ad0a.chunk.js",
+    "main.js.map": "https://mesadhan.github.io/tdd-react-redux/static/js/main.1485ad0a.chunk.js.map",
+    "runtime-main.js": "https://mesadhan.github.io/tdd-react-redux/static/js/runtime-main.f68a059d.js",
+    "runtime-main.js.map": "https://mesadhan.github.io/tdd-react-redux/static/js/runtime-main.f68a059d.js.map",
+    "static/js/2.cef67bd5.chunk.js": "https://mesadhan.github.io/tdd-react-redux/static/js/2.cef67bd5.chunk.js",
+    "static/js/2.cef67bd5.chunk.js.map": "https://mesadhan.github.io/tdd-react-redux/static/js/2.cef67bd5.chunk.js.map",
+    "index.html": "https://mesadhan.github.io/tdd-react-redux/index.html",
+    "precache-manifest.81ae9f18c5689907541f95819b4a3667.js": "https://mesadhan.github.io/tdd-react-redux/precache-manifest.81ae9f18c5689907541f95819b4a3667.js",
+    "service-worker.js": "https://mesadhan.github.io/tdd-react-redux/service-worker.js",
+    "static/css/main.f5089a4c.chunk.css.map": "https://mesadhan.github.io/tdd-react-redux/static/css/main.f5089a4c.chunk.css.map",
+    "static/js/2.cef67bd5.chunk.js.LICENSE": "https://mesadhan.github.io/tdd-react-redux/static/js/2.cef67bd5.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.ee975718.js",
-    "static/js/2.1e19b0de.chunk.js",
-    "static/css/main.a2104af1.chunk.css",
-    "static/js/main.94eb404e.chunk.js"
+    "static/js/runtime-main.f68a059d.js",
+    "static/js/2.cef67bd5.chunk.js",
+    "static/css/main.f5089a4c.chunk.css",
+    "static/js/main.1485ad0a.chunk.js"
   ]
 }
