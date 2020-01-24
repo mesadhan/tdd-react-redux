@@ -15,16 +15,23 @@ class App extends Component {
   render() {
     return (
 
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
+
         <div data-test="appComponent" className="App">
+
 
           <Header />
           <Nav />
- 
+
+
+          {/* {process.env.PUBLIC_URL} -  {process.env.NODE_ENV} */}
+
+
+
           {/* define all the route */}
           <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/about" exact component={About}/>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
           </Switch>
 
         </div>
