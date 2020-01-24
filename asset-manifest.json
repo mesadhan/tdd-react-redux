@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "https://mesadhan.github.io/tdd-react-redux/static/css/main.f5089a4c.chunk.css",
-    "main.js": "https://mesadhan.github.io/tdd-react-redux/static/js/main.df45a7ab.chunk.js",
-    "main.js.map": "https://mesadhan.github.io/tdd-react-redux/static/js/main.df45a7ab.chunk.js.map",
-    "runtime-main.js": "https://mesadhan.github.io/tdd-react-redux/static/js/runtime-main.f68a059d.js",
-    "runtime-main.js.map": "https://mesadhan.github.io/tdd-react-redux/static/js/runtime-main.f68a059d.js.map",
-    "static/js/2.cef67bd5.chunk.js": "https://mesadhan.github.io/tdd-react-redux/static/js/2.cef67bd5.chunk.js",
-    "static/js/2.cef67bd5.chunk.js.map": "https://mesadhan.github.io/tdd-react-redux/static/js/2.cef67bd5.chunk.js.map",
-    "index.html": "https://mesadhan.github.io/tdd-react-redux/index.html",
-    "precache-manifest.d72fa68ec2da30e43f8f6c389ff86730.js": "https://mesadhan.github.io/tdd-react-redux/precache-manifest.d72fa68ec2da30e43f8f6c389ff86730.js",
-    "service-worker.js": "https://mesadhan.github.io/tdd-react-redux/service-worker.js",
-    "static/css/main.f5089a4c.chunk.css.map": "https://mesadhan.github.io/tdd-react-redux/static/css/main.f5089a4c.chunk.css.map",
-    "static/js/2.cef67bd5.chunk.js.LICENSE": "https://mesadhan.github.io/tdd-react-redux/static/js/2.cef67bd5.chunk.js.LICENSE"
+    "main.css": "/tdd-react-redux/static/css/main.f5089a4c.chunk.css",
+    "main.js": "/tdd-react-redux/static/js/main.929f7fbf.chunk.js",
+    "main.js.map": "/tdd-react-redux/static/js/main.929f7fbf.chunk.js.map",
+    "runtime-main.js": "/tdd-react-redux/static/js/runtime-main.ee975718.js",
+    "runtime-main.js.map": "/tdd-react-redux/static/js/runtime-main.ee975718.js.map",
+    "static/js/2.cef67bd5.chunk.js": "/tdd-react-redux/static/js/2.cef67bd5.chunk.js",
+    "static/js/2.cef67bd5.chunk.js.map": "/tdd-react-redux/static/js/2.cef67bd5.chunk.js.map",
+    "index.html": "/tdd-react-redux/index.html",
+    "precache-manifest.22cd652929bbc4fa79db2b163c56e63d.js": "/tdd-react-redux/precache-manifest.22cd652929bbc4fa79db2b163c56e63d.js",
+    "service-worker.js": "/tdd-react-redux/service-worker.js",
+    "static/css/main.f5089a4c.chunk.css.map": "/tdd-react-redux/static/css/main.f5089a4c.chunk.css.map",
+    "static/js/2.cef67bd5.chunk.js.LICENSE": "/tdd-react-redux/static/js/2.cef67bd5.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.f68a059d.js",
+    "static/js/runtime-main.ee975718.js",
     "static/js/2.cef67bd5.chunk.js",
     "static/css/main.f5089a4c.chunk.css",
-    "static/js/main.df45a7ab.chunk.js"
+    "static/js/main.929f7fbf.chunk.js"
   ]
 }
