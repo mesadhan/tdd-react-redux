@@ -1,7 +1,7 @@
 import { testStore } from './../../../utils';
-import { fetchPosts } from './../../actions';
+import { fetchPosts, fetchFortnitePosts } from './../../actions';
 
-describe('fetchPosts action', () => {
+describe('fetch api action', () => {
 
 
     it('Store is updated correctly', () => {
@@ -19,4 +19,21 @@ describe('fetchPosts action', () => {
 
             });
     });
+
+    it('Store is update with Fortnite api data correctly', () => {
+
+        const store = testStore();
+        return store.dispatch(fetchFortnitePosts())
+        .then(() => {
+            const newState = store.getState();
+            //console.log('output', newState.posts.data);
+            
+            expect(newState.posts.data[0]).toHaveProperty('itemId');
+            expect(newState.posts.data[0].item).toHaveProperty('name');
+            expect(newState.posts.data[0].item.images).toHaveProperty('icon');
+            
+        });
+
+    });
+
 });

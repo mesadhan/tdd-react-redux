@@ -18,3 +18,21 @@ export const fetchPosts = () => async (dispatch) => {
         console.error(error);
     }
 };
+
+
+export const fetchFortnitePosts = () => async (dispatch) => {
+    try{
+        const url = "https://fortnite-api.theapinetwork.com/store/get";
+        const result = await fetch(url);
+        const res = await result.json();
+        //console.log('message', res);
+
+        dispatch({
+            type: types.GET_FORTNITE_POSTS,
+            payload: res
+        });
+
+    }catch(error) {
+        console.error(error);
+    }
+}
