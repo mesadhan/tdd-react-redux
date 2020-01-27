@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Headline from './core/headline';
 import SharedButton from './core/button';
 import ListItem from './core/listitem'
+import IconWithListfrom from './core/IconWithList'
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions';
+import { fetchPosts, fetchFortnitePosts } from '../actions';
 
 import './home.scss'
 
@@ -33,6 +34,7 @@ class Home extends Component {
 
   loadData() {
     this.props.fetchPosts();
+    this.props.fetchFortnitePosts();
     this.updateStateHideBtn();
   }
 
@@ -49,8 +51,9 @@ class Home extends Component {
 
   render() {
 
-    const { posts } = this.props;
+    const { posts, fortnitePosts } = this.props;
     const { hideBtn } = this.state;
+
 
     const configButton = {
       buttonText: 'Get posts',
@@ -70,7 +73,26 @@ class Home extends Component {
             <SharedButton {...configButton} />
           }
 
-          {posts.length > 0 && 
+          {fortnitePosts &&
+          <div>
+            {fortnitePosts.map((data, index) => {
+
+              const {itemId} = data;
+              const configurationListItem = {
+                name: data.item.name,
+                //description: data.item.name,
+                icon: data.item.images.icon,
+                ratings: data.item.ratings
+              }
+
+              return (
+                  <IconWithListfrom key={index} {...configurationListItem}/>
+              )
+            })}
+          </div>
+          }
+
+          {/*{posts.length > 0 &&
             <div>
               {posts.map((post, index) => {
 
@@ -85,7 +107,7 @@ class Home extends Component {
                 )
               })}
             </div>
-          }
+          }*/}
 
         </section>
       </div>
@@ -96,13 +118,15 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.posts
+    posts: state.posts,
+    fortnitePosts: state.posts.data
   }
 }
 
 // if we and to override dispatcher method
 const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts())
+  fetchPosts: () => dispatch(fetchPosts()),
+  fetchFortnitePosts: () => dispatch(fetchFortnitePosts()),
 })
 
 //export default connect(mapStateToProps, { fetchPosts })(Home);
