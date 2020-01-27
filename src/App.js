@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './components/header';
-import Nav from './components/nav';
-import Home from './Home';
-import About from './About';
+import Header from './components/layouts/header';
+import Nav from './components/layouts/nav';
+import Home from './components/Home';
+import About from './components/About';
 import './app.scss'
 
 

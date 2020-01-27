@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Headline from './components/headline';
-import SharedButton from './components/button';
-import ListItem from './components/listitem'
+import Headline from './core/headline';
+import SharedButton from './core/button';
+import ListItem from './core/listitem'
 import { connect } from 'react-redux';
-import { fetchPosts } from './actions';
+import { fetchPosts } from '../actions';
 
 import './home.scss'
 

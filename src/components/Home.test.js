@@ -1,7 +1,7 @@
 import Home from './Home'
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr, testStore } from '../utils';
+import { findByTestAttr, testStore } from '../../utils';
 
 
 const setUp = (initialState={}) => {
