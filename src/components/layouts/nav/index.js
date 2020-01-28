@@ -7,6 +7,7 @@ const Nav = (props) => {
         <div data-test="navComponent" className="navComponent">
             <div className="leftMenus">
                 <Link to="/">Home</Link>
+                <Link to="/blog">Blog</Link>
                 <Link to="/about">About</Link>
             </div>
             <div className="rightMenus">

@@ -5,10 +5,12 @@ import Home from './components/Home';
 import About from './components/About';
 import './app.scss'
 
-
 import {
   BrowserRouter as Router, Switch, Route,
 } from "react-router-dom";
+
+import BlogPost from "./components/BlogPost";
+import DetailsPage from "./components/DetailsPage";
 
 
 class App extends Component {
@@ -31,6 +33,8 @@ class App extends Component {
           {/* define all the route */}
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/item/:id" exact component={DetailsPage} />
+            <Route path="/blog" exact component={BlogPost} />
             <Route path="/about" exact component={About} />
           </Switch>
 

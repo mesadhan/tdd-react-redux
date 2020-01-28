@@ -11,7 +11,7 @@ const Header = (props) => {
                     <img data-test="logoImage" src={Logo} alt="logo"/>
                 </Link>
                 <div className="welcome">
-                    <h1>Md. Sadhan Sarker</h1>
+                    {/*<h1>Md. Sadhan Sarker</h1>*/}
                 </div>
             </div>
            {/* Hello from React Component */}

@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
+import './style.scss'
+
 
 class IconWithList extends Component {
 
@@ -9,10 +11,14 @@ class IconWithList extends Component {
         if (!name) return null;
 
         return (
-            <div data-test="IconWithListComponent" className="itemBox">
+            <div data-test="IconWithListComponent" className="IconWithList">
                 <img className="itemIcon" src={icon} alt="Icon"/>
-                <h3 className="title" data-test="componentTitle">Name: {name}</h3>
-                <p>{ratings.avgStars} = {ratings.totalPoints} = {ratings.numberVotes}</p>
+                <div className="itemBoxChildren">
+                    <h3 className="itemTitle" data-test="componentTitle"> {name}</h3>
+                    <p>Avg. Stars:- {ratings.avgStars}</p>
+                    <p>Total Points:- {ratings.totalPoints}</p>
+                    <p>Votes:- {ratings.numberVotes}</p>
+                </div>
             </div>
         )
     }
@@ -20,7 +26,7 @@ class IconWithList extends Component {
 
 IconWithList.propTypes = {
     name: PropTypes.string
-}
+};
 
 
 export default IconWithList;

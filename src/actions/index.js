@@ -35,4 +35,4 @@ export const fetchFortnitePosts = () => async (dispatch) => {
     }catch(error) {
         console.error(error);
     }
-}
+};
