@@ -15,6 +15,11 @@ import DetailsPage from "./components/DetailsPage";
 
 class App extends Component {
   render() {
+
+   /* const props = {
+      name: 'dddddddddddddddd'
+    };*/
+
     return (
 
       <Router basename={process.env.PUBLIC_URL}>
@@ -34,6 +39,12 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/item/:id" exact component={DetailsPage} />
+
+            {/* <Route path="/item/:id" exact
+                   render={(routeProps) => (
+                       <DetailsPage {...routeProps} {...props} />
+                   )} />*/}
+
             <Route path="/blog" exact component={BlogPost} />
             <Route path="/about" exact component={About} />
           </Switch>

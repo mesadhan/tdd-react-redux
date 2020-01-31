@@ -41,7 +41,14 @@ class Home extends Component {
 
               return (
 
-                  <Link to={`/item/${itemId}`} key={index}>
+                  <Link
+                      to={{
+                        pathname: `/item/${itemId}`,
+                        state: {
+                          singlePost: configurationListItem
+                        }
+                      }}
+                      key={index}>
                     <IconWithListfrom {...configurationListItem}/>
                   </Link>
               )
