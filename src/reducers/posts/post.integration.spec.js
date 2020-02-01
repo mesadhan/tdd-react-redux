@@ -3,10 +3,12 @@ import { fetchPosts, fetchFortnitePosts } from './../../actions';
 
 describe('fetch api action', () => {
 
+    let store;
+    beforeEach(() => {
+        store = testStore();
+    });
 
     it('Store is updated correctly', () => {
-
-        const store = testStore();
 
         return store.dispatch(fetchPosts())
             .then(() => {
