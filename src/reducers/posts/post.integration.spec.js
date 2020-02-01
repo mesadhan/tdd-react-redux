@@ -8,7 +8,7 @@ describe('fetch api action', () => {
         store = testStore();
     });
 
-    it('Store is updated correctly', () => {
+    it('Store is updated correctly', async () => {
 
         return store.dispatch(fetchPosts())
             .then(() => {
@@ -22,7 +22,7 @@ describe('fetch api action', () => {
             });
     });
 
-    it('Store is update with Fortnite api data correctly', () => {
+    it('Store is update with Fortnite api data correctly', async () => {
 
         const store = testStore();
         return store.dispatch(fetchFortnitePosts())
