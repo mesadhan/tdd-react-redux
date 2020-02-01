@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import './style.scss'
 import PrintJson from "./core/PrintJson";
+import PropTypes from "prop-types";
+import IconWithList from "./core/IconWithList";
 
 
 class DetailsPage extends Component {
@@ -12,7 +13,7 @@ class DetailsPage extends Component {
 
         //console.log('DetailsPage-----', props);
         //console.log('DetailsPage-----', props.location);
-        console.log('DetailsPage', props.location.state.singlePost);
+        //console.log('DetailsPage', props.location.state.singlePost);
     }
 
     /*componentDidMount() {
@@ -29,10 +30,10 @@ class DetailsPage extends Component {
 
                 <div className="DetailsBox">
                     <div>
-                        <img className="iconBox" src={icon}/>
+                        <img data-test="componentIcon" className="iconBox" src={icon}/>
                     </div>
                     <div className="itemDetails">
-                        <h3>{name}</h3>
+                        <h3 data-test="componentName">{name}</h3>
                         <p>Avg. Stars: {ratings.avgStars}</p>
                         <p>Total Points: {ratings.totalPoints}</p>
                         <p>Votes: {ratings.numberVotes}</p>
@@ -43,17 +44,8 @@ class DetailsPage extends Component {
     }
 }
 
-
-const mapStateToProps = (state) => {
-    return {
-        // receive data
-    }
+DetailsPage.propTypes = {
+    name: PropTypes.string
 };
 
-// if we and to override dispatcher method
-const mapDispatchToProps = dispatch => ({
-    // send data
-});
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(DetailsPage);
+export default DetailsPage;

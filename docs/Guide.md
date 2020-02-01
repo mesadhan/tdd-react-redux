@@ -1,14 +1,14 @@
-## What is React?
+## 🔰 What is React?
 
 React is a UI library built by Facebook. React gives us the ability to logically think about our frontend sites and apps.
 
-## What is Redux?
+## 🔰 What is Redux?
 
 
-## What is TDD?
+## 🔰 What is TDD?
 
 
-## React Benefits are:
+## 🔰 React Benefits are:
 
 - Strong community.
 - Can be made quickly.
@@ -18,7 +18,7 @@ React is a UI library built by Facebook. React gives us the ability to logically
 - Scale well with small and large teams.
 - Transfer knowledge from desktop to mobile apps.
 
-## Recommended Knowledge (Prerequisites)
+## 🔰 Recommended Knowledge (Prerequisites)
 
 - Knowledge of HTML & CSS.
 - Knowledge of JavaScript and ES6.
@@ -26,11 +26,11 @@ React is a UI library built by Facebook. React gives us the ability to logically
 - Some knowledge about Node & npm.
 - Knowledge of basic Command line.
 
-## Knowledge of JavaScript and ES6
+## 🔰 Knowledge of JavaScript and ES6
 
-We need basic knowledge about ES6. Primarily 4 main syntax updates need to know, that are used heavily in React.
+We need basic knowledge about ES6. Primarily 5 main syntax updates need to know, that are used heavily in React.
 
-1.let and const in addition to var:- Use `const` or `let` instead of `var`
+📗 1.let and const in addition to var:- Use `const` or `let` instead of `var`
 
 ```js
 var message = 'Hello! world';       // ES5 Expression
@@ -38,7 +38,7 @@ let message = 'Hello! world';       // ES6 Expression
 const message = 'Hello! world';     // ES6 - const like constant or final
 ```
 
-2.Arrow Functions (=>):- is compact alternative to a regular function expression
+📗 2.Arrow Functions (=>):- is compact alternative to a regular function expression
 
 ```js
 // ES5 Expression
@@ -65,7 +65,7 @@ const addNumbers = (a, b) => {
 };
 ```
 
-3.Classes:-
+📗 3.Classes:-
 
 JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax does not introduce a new object-oriented inheritance model to JavaScript.
 
@@ -80,7 +80,7 @@ class App extends React.Component {
 }
 ```
 
-4.Destructuring:-
+📗 4.Destructuring:-
 
 Object destructuring and array destructuring are very easy ways to simplify our JavaScript code.
 
@@ -119,7 +119,7 @@ let product2 = product[1];
 let [p1, p2] = product;
 ```
 
-4.Spread:-
+📗 5.Spread:-
 
 Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
@@ -143,7 +143,7 @@ const fullRoles = [
 ```
 
 
-## Create React App
+## 🔰  Create React App
 
 - 1.[Download & Install NodeJS](https://nodejs.org/en/download/)
 - 2.[Download & Install VSCode](https://code.visualstudio.com/download)
@@ -167,7 +167,7 @@ yarn --version
 
 `Note: Versions might be different, from me. Now we good to go forward`
 
-- 4. Open terminal or command line and follow below commands,
+- 4.Open terminal or command line and follow below commands,
 
 ```bash
 # create new react app using command
@@ -213,9 +213,8 @@ yarn add redux react-redux redux-thunk
 yarn add -D husky
 ```
 
-## Let's come into the coding part
 
-1.final project structure
+## 🔰  Final project structure
 
 ```bash
 tdd-react-redux
@@ -269,8 +268,12 @@ tdd-react-redux
 [Full Source Code](https://github.com/mesadhan/tdd-react-redux)
 
 
+## 🔰 Let's come into the coding part
 
-2.Create `utils/index.js` file for test helper
+📗 Config Environment
+
+> 1.Create `utils/index.js` file for test helper
+
 ```js
 import PropTypes, {checkPropTypes} from 'prop-types';
 import { applyMiddleware, createStore } from 'redux';
@@ -292,7 +295,7 @@ export const testStore = (initialState) => {
 };
 ```
 
-3.Create `src/createStore.js`, to support redux and enable store,
+> 3.Create `src/createStore.js`, to support redux and enable store,
 
 ```js
 import { createStore, applyMiddleware } from 'redux';
@@ -304,7 +307,7 @@ export const createStoreWithMiddleware = applyMiddleware(...middlewares)(createS
 export const store = createStoreWithMiddleware(RootReducer);
 ```
 
-4.Update `setupTests.js` file, for enzyme support,
+> 4.Update `setupTests.js` file, for enzyme support,
 
 ```js
 import Enzyme from 'enzyme';
@@ -316,7 +319,7 @@ Enzyme.configure({
 });
 ```
 
-5.To Enable Redux Provider open `src/index.js` file and update it,
+> 5.To Enable Redux Provider open `src/index.js` file and update it,
 
 ```js
 import React from 'react';
@@ -332,9 +335,9 @@ ReactDOM.render(
 ``` 
 
 
-6.Now Config Reducers
+#### 📗 6.Now, Config Reducers
 
-Create redux `src/reducers/posts/reducer.js`
+> Create redux `src/reducers/posts/reducer.js`
 
 ```js
 import { types } from './../../actions/types';
@@ -353,7 +356,7 @@ const postReducer = (state=[], action) => {
 export default postReducer;
 ```
 
-Create `src/reducers/posts/reducer.spec.js` test file
+> Create `src/reducers/posts/reducer.spec.js` test file
 
 ```js
 import { types } from './../../actions/types';
@@ -379,7 +382,7 @@ describe('Posts Reducer', () => {
 });
 ```
 
-Finally, create your `src/reducers/index.js` and include
+> Finally, create your `src/reducers/index.js` and include
 
 ```js
 import { combineReducers } from 'redux';
@@ -390,9 +393,9 @@ export default combineReducers({
 });
 ```
 
-6.Now Create Redux Actions
+#### 📗 6.Now Create Redux Actions
 
-Create `src/actions/types.js` and include
+> Create `src/actions/types.js` and include
 
 ```js
 export const types = {
@@ -401,7 +404,7 @@ export const types = {
 };
 ```
 
-Create `src/actions/index.js` and includes
+> Create `src/actions/index.js` and includes
 
 ```js
 import { types } from './types';
@@ -436,7 +439,7 @@ export const fetchFortnitePosts = () => async (dispatch) => {
 };
 ```
 
-Finally, create `src/reducers/posts/post.integration.spec.js` and include
+> Finally, create `src/reducers/posts/post.integration.spec.js` and include
 
 ```js
 import { testStore } from './../../../utils';
@@ -481,9 +484,248 @@ describe('fetch api action', () => {
 ```
 
 
-7. Setup React Component and Test Cases 
+## 🔰 7.Setup React Component & Test Cases
 
-Create `src/App.test.js`, and include
+
+#### 📗 1. Nav Component,
+ 
+ 
+> create `src/components/layouts/nav/index.spec.js`
+
+```js
+import React from 'react';
+import { shallow } from 'enzyme';
+import { findByTestAttr, checkProps } from '../../../../utils'
+import Nav from './index';
+
+const setUp =(props = {}) => {
+    return shallow(<Nav/>);
+};
+
+describe('Index Component', () => {
+
+    let component;
+    beforeEach(()=> {
+        component = setUp();
+    });
+
+    it('Should render without error', () => {
+        const wrapper = findByTestAttr(component, 'navComponent');
+        expect(wrapper.length).toBe(1)
+    });
+});
+
+```
+
+> create `src/components/layouts/nav/index.js`
+
+```js
+import React from 'react';
+import './style.scss';
+import {Link} from "react-router-dom";
+
+const Nav = (props) => {
+    return (
+        <div data-test="navComponent" className="navComponent">
+            <div className="leftMenus">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+            </div>
+            <div className="rightMenus">
+                <img data-test="userLogo" src="https://mesadhan.github.io/assets/profile_pic.jpg" alt="logo"/>
+            </div>
+        </div>
+    )
+};
+
+export default Nav;
+```
+
+#### 📗 2. IconListItem Component
+
+
+> Create `src/components/core/IconWithList.spec.js`, and include
+
+```js
+import React from 'react';
+import {shallow} from 'enzyme';
+import {findByTestAttr, checkProps} from '../../../utils'
+import IconWithList from './IconWithList';
+
+describe('IconWithList Component', () => {
+
+    describe('Checking PropTpes', () => {
+
+        it('Should not throwing warning', () => {
+            const expectedProps = {
+                name: 'item 1',
+                icon: 'icon',
+                ratings: {}
+            };
+            const propsError = checkProps(IconWithList, expectedProps);
+            expect(propsError).toBeUndefined();
+        });
+
+    });
+
+    describe('Should Renders', () => {
+        let component;
+        beforeEach(() => {
+            const props = {
+                name: 'item 1',
+                icon: 'icon',
+                ratings: {
+                    avgStars: 1,
+                    totalPoints: 1,
+                    numberVotes: 1
+                },
+            };
+            component = shallow(<IconWithList {...props} />);
+        });
+
+        it('Should render a ItemList', () => {
+            let itemList = findByTestAttr(component, 'IconWithListComponent');
+            expect(itemList.length).toBe(1);
+        });
+
+        it('Should render a name', () => {
+            let title = findByTestAttr(component, 'componentTitle');
+            expect(title.length).toBe(1);
+        });
+
+        it('Should render a Icon', () => {
+            let title = findByTestAttr(component, 'componentIcon');
+            expect(title.length).toBe(1);
+        });
+
+        it('Should render a Stars', () => {
+            let title = findByTestAttr(component, 'componentStars');
+            expect(title.length).toBe(1);
+        });
+
+        it('Should render a Points', () => {
+            let title = findByTestAttr(component, 'componentPoints');
+            expect(title.length).toBe(1);
+        });
+
+        it('Should render a Votes', () => {
+            let title = findByTestAttr(component, 'componentVotes');
+            expect(title.length).toBe(1);
+        });
+    });
+
+    describe('Should Not Renders', () => {
+        let component;
+        beforeEach(() => {
+            component = shallow(<IconWithList/>);
+        });
+
+        it('Component is not render', () => {
+            let listItem = findByTestAttr(component, 'IconWithListComponent');
+            expect(listItem.length).toBe(0);
+        });
+    });
+});
+```
+
+> Create `src/components/core/IconWithList.js`, and include
+
+```js
+import React, {Component} from 'react'
+import PropTypes from 'prop-types';
+import './style.scss'
+
+class IconWithList extends Component {
+
+    render() {
+        const {icon, name, ratings} = this.props;
+
+        if (!name) return null;
+
+        return (
+            <div data-test="IconWithListComponent" className="IconWithList">
+                <img data-test="componentIcon" className="itemIcon" src={icon} alt="Icon"/>
+                <div className="itemBoxChildren">
+                    <h3 className="itemTitle" data-test="componentTitle"> {name}</h3>
+                    <p data-test="componentStars" >Avg. Stars:- {ratings.avgStars}</p>
+                    <p data-test="componentPoints" >Total Points:- {ratings.totalPoints}</p>
+                    <p data-test="componentVotes" >Votes:- {ratings.numberVotes}</p>
+                </div>
+            </div>
+        )
+    }
+};
+
+IconWithList.propTypes = {
+    name: PropTypes.string
+};
+export default IconWithList;
+```
+
+#### 📗 3. App Component
+
+> Create `src/components/About.test.js`, and include
+
+```js
+import React from 'react';
+import { shallow } from 'enzyme';
+import { findByTestAttr, checkProps } from '../../utils'
+import About from './About';
+
+const setUp =(props = {}) => {
+    return shallow(<About/>);
+};
+
+describe('About Component', () => {
+
+    let component;
+    beforeEach(()=> {
+        component = setUp();
+    });
+
+    it('Should render without error', () => {
+        const wrapper = findByTestAttr(component, 'aboutComponent');
+        expect(wrapper.length).toBe(1)
+    });
+});
+```
+
+
+> Create `src/components/About.js`, and include
+
+```js
+import React, { Component } from 'react';
+
+class About extends Component {
+    render() {
+        document.title = "About";
+        return (
+            <div data-test="aboutComponent">
+                <h1>Hello From About Page</h1>
+            </div>
+        );
+    }
+}
+export default About;
+```
+
+#### 📗 3. App Component
+
+> Create `src/components/DetailsPage.test.js`, and include
+
+```js
+
+```
+
+> Create `src/components/DetailsPage.js`, and include
+
+```js
+
+```
+
+#### 📗 3. App Component
+
+> Create `src/App.test.js`, and include
 
 ```js
 import React from 'react';
@@ -509,11 +751,10 @@ describe('App Component', () => {
 });
 ```
 
-Create `src/App.js`, and include
+> Create `src/App.js`, and include
 
 ```js
 import React, { Component } from 'react';
-import Header from './components/layouts/header';
 import Nav from './components/layouts/nav';
 import Home from './components/Home';
 import About from './components/About';
@@ -531,10 +772,10 @@ class App extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div data-test="appComponent" className="App">
+          <Nav />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/item/:id" exact component={DetailsPage} />
-            <Route path="/blog" exact component={BlogPost} />
             <Route path="/about" exact component={About} />
           </Switch>
         </div>
@@ -545,114 +786,24 @@ class App extends Component {
 export default App;
 ```
 
-8.Home Component Setup
+#### 📗 2. Home Component Setup
 
 
-Create `src/components/Home.test.js`
+> Create `src/components/Home.test.js`
 
 ```js
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, testStore } from '../../utils';
-import Home from "./Home";
 
-const setUp = (initialState={}) => {
-    const store = testStore(initialState);
-    const component = shallow(<Home store={store} />).childAt(0).dive();
-    //console.log( component.debug() );
-    return component;
-};
-
-describe('Home Component', () => {
-    let component;
-    beforeEach(() => {
-        const initialState = {
-            posts: [
-                {title: 'title 1', body: 'Body 1'},
-                {title: 'title 2', body: 'Body 2'},
-                {title: 'title 3', body: 'Body 3'}
-            ]
-        };
-        component =  setUp(initialState)
-    });
-    
-    it('Should render without errors', () => {
-        let c = findByTestAttr(component, 'homeComponent');
-        expect(c.length).toBe(1);
-    });
-});
 ```
 
+> Create `src/components/Home.js`
 
 ```js
-import React, {Component} from 'react';
-import IconWithListfrom from './core/IconWithList'
-import {connect} from 'react-redux';
-import {fetchFortnitePosts, fetchPosts} from '../actions';
-import {Link} from "react-router-dom";
-import './style.scss'
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.loadData = this.loadData.bind(this);
-    this.loadData();    // initially load data
-  }
-  loadData() {
-    this.props.fetchFortnitePosts();
-  }
-  render() {
-    const { dumPosts, fortnitePosts } = this.props;
-    document.title = "Welcome";
-    return (
-      <div data-test="homeComponent" className="Home">
-        <section className="main">
-          {fortnitePosts &&
-          <div>
-            {fortnitePosts.map((data, index) => {
-              const {itemId} = data;
-              const configurationListItem = {
-                name: data.item.name,
-                icon: data.item.images.icon,
-                ratings: data.item.ratings
-              };
-              return (
-                  <Link to={{
-                        pathname: `/item/${itemId}`,
-                        state: {
-                          singlePost: configurationListItem
-                        }
-                      }}
-                      style={{ textDecoration: 'none' }} key={index}>
-                    <IconWithListfrom {...configurationListItem}/>
-                  </Link>
-              )
-            })}
-          </div>
-          }
-        </section>
-      </div>
-    );
-  }
-}
-const mapStateToProps = (state) => {
-  return {
-    dumPosts: state.posts,
-    fortnitePosts: state.posts.data
-  }
-};
-// if we and to override dispatcher method
-const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts()),
-  fetchFortnitePosts: () => dispatch(fetchFortnitePosts()),
-});
-//export default connect(mapStateToProps, { fetchPosts })(Home);
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
 ```
 
 
 
-## References
+##  🔰  References
 
 - https://linuxjourney.com/
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
