@@ -12,12 +12,12 @@ class IconWithList extends Component {
 
         return (
             <div data-test="IconWithListComponent" className="IconWithList">
-                <img className="itemIcon" src={icon} alt="Icon"/>
+                <img data-test="componentIcon" className="itemIcon" src={icon} alt="Icon"/>
                 <div className="itemBoxChildren">
                     <h3 className="itemTitle" data-test="componentTitle"> {name}</h3>
-                    <p>Avg. Stars:- {ratings.avgStars}</p>
-                    <p>Total Points:- {ratings.totalPoints}</p>
-                    <p>Votes:- {ratings.numberVotes}</p>
+                    <p data-test="componentStars" >Avg. Stars:- {ratings.avgStars}</p>
+                    <p data-test="componentPoints" >Total Points:- {ratings.totalPoints}</p>
+                    <p data-test="componentVotes" >Votes:- {ratings.numberVotes}</p>
                 </div>
             </div>
         )
