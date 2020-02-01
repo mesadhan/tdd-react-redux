@@ -1,6 +1,31 @@
-.main{
+.main {
   width: 100%;
   max-width: 980px;
   margin: 20px auto 80px;
   padding: 0 10px;
+}
+
+.homeComponent{
+
+}
+
+.DetailsPageComponent {
+
+  margin: 20px auto 80px 10px;
+
+  .DetailsBox {
+
+    display: flex;
+    flex-direction: row;
+
+    .iconBox {
+      height: 200px;
+    }
+
+    .itemDetails {
+      display: block;
+      flex-grow: 1;
+      padding: 20px;
+    }
+  }
 }

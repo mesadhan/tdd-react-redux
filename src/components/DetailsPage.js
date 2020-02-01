@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './style.scss'
+import PrintJson from "./core/PrintJson";
 
 
 class DetailsPage extends Component {
 
     constructor(props) {
         super(props);
+        document.title = "Details Page";
 
         //console.log('DetailsPage-----', props);
         //console.log('DetailsPage-----', props.location);
-        console.log('DetailsPage-----', props.location.state.singlePost);
-        //console.log('DetailsPage-----location', props.location);
+        console.log('DetailsPage', props.location.state.singlePost);
     }
 
     /*componentDidMount() {
@@ -19,10 +20,24 @@ class DetailsPage extends Component {
     }*/
 
     render() {
+        const {name, icon, ratings} = this.props.location.state.singlePost;
         return (
-            <div data-test="detailsPageComponent" className="DetailsPage">
-                <h1>Hello from details page</h1>
-                <img src={this.props.location.state.singlePost.icon}/>
+            <div data-test="detailsPageComponent" className="DetailsPageComponent">
+                {/*<PrintJson data={this.props.location.state.singlePost}/>*/}
+
+                <h1>Product Details</h1>
+
+                <div className="DetailsBox">
+                    <div>
+                        <img className="iconBox" src={icon}/>
+                    </div>
+                    <div className="itemDetails">
+                        <h3>{name}</h3>
+                        <p>Avg. Stars: {ratings.avgStars}</p>
+                        <p>Total Points: {ratings.totalPoints}</p>
+                        <p>Votes: {ratings.numberVotes}</p>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -22,6 +22,7 @@ class Home extends Component {
 
   render() {
     const { dumPosts, fortnitePosts } = this.props;
+    document.title = "Welcome";
 
     return (
       <div data-test="homeComponent" className="Home">
@@ -40,15 +41,13 @@ class Home extends Component {
               };
 
               return (
-
-                  <Link
-                      to={{
+                  <Link to={{
                         pathname: `/item/${itemId}`,
                         state: {
                           singlePost: configurationListItem
                         }
                       }}
-                      key={index}>
+                      style={{ textDecoration: 'none' }} key={index}>
                     <IconWithListfrom {...configurationListItem}/>
                   </Link>
               )
