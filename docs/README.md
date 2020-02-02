@@ -1056,6 +1056,7 @@ Before push into git, we like to pass our test successfully. We already install 
 ## 🔰 Git page deploy
 
 - npm install gh-pages
+- Setup gh-page configuration into 'package.js' file 
 - npm run deploy
 
 
