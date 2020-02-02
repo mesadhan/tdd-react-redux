@@ -1052,6 +1052,12 @@ Before push into git, we like to pass our test successfully. We already install 
     
     # Run application
     yarn start
+    
+## 🔰 Git page deploy
+
+- npm install gh-pages
+- npm run deploy
+
 
 👌 Congratulations. It's a long tutorial!. & Thanks for your time & passion.
 Feel free to comments, If you have any issues & queries.
@@ -1065,3 +1071,4 @@ Feel free to comments, If you have any issues & queries.
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 - https://www.npmjs.com/package/env-cmd
+- https://www.npmjs.com/package/gh-pages
