@@ -48,8 +48,6 @@ describe('Shared Button Component', () => {
             expect(callback).toBe(1);
         });
 
-
-
     });
 
 });

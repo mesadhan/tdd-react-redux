@@ -5,7 +5,7 @@ import Nav from './index';
 
 const setUp =(props = {}) => {
     return shallow(<Nav/>);
-}
+};
 
 
 describe('Index Component', () => {

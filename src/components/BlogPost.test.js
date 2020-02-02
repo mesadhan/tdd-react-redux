@@ -9,7 +9,7 @@ const setUp = (initialState={}) => {
     const component = shallow(<BlogPost store={store} />).childAt(0).dive();
     //console.log( component.debug() );
     return component;
-}
+};
 
 describe('BlogPost Component', () => {
 

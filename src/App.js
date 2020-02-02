@@ -17,7 +17,7 @@ class App extends Component {
   render() {
 
    /* const props = {
-      name: 'dddddddddddddddd'
+      name: 'sadhan Sarker'
     };*/
 
     return (

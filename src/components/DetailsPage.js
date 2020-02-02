@@ -12,7 +12,6 @@ class DetailsPage extends Component {
         document.title = "Details Page";
 
         //console.log('DetailsPage-----', props);
-        //console.log('DetailsPage-----', props.location);
         //console.log('DetailsPage', props.location.state.singlePost);
     }
 
